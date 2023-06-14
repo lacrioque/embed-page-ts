@@ -1,6 +1,6 @@
 {
   "name": "embed-page-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "module": "dist/es6/index.js",
   "main": "dist/commonjs/index.js",
   "types": "dist/types",
