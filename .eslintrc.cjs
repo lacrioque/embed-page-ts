@@ -18,8 +18,8 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/*.cjs", "*.cjs"],
+      files: ["**/*.cjs", "*.cjs", "dist/commonjs/*.*"],
       env: { node: true },
-    },
+    }
   ],
 };

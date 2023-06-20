@@ -9,18 +9,22 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.cts,.mts --fix --ignore-path .gitignore",
-    "build:es6": "tsc -p tsconfig.json --target esnext --outDir dist/es6",
-    "build:cjs": "tsc -p tsconfig.json --target es2016 --module commonjs --outDir dist/commonjs",
     "prebuild": "yarn lint",
-    "build": "run-p build:es6 build:cjs"
+    "build": "rollup -c"
   },
   "dependencies": {
     "typescript": "^5"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
     "eslint": "^8.42.0",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "rollup": "^3.25.1",
+    "rollup-plugin-empty-dir": "^1.0.5"
   }
 }
